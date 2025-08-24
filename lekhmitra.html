@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekha Mitra Sim</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -114,8 +116,8 @@
 
 
         .question-nav-btn.marked {
-            background-color: #FF6600;
-            border-color: #FF6600;
+            background-color: #6a5acd;
+            border-color: #6a5acd;
             color: #FFFFFF;
         }
 
@@ -126,7 +128,11 @@
             color: #000000;
         }
 
-
+        .question-nav-btn.not-answered {
+            background-color: #FF6600;
+            border-color: #FF6600;
+            color: #FFFFFF;
+        }
 
         .legend {
             margin-top: 20px;
@@ -153,11 +159,21 @@
 
 
 
-        .legend-color.not-attempted { background-color: transparent; }
-        .legend-color.attempted { background-color: #00AA00; }
-        .legend-color.marked { background-color: #FF6600; }
+        .legend-color.not-attempted {
+            background-color: transparent;
+        }
 
+        .legend-color.attempted {
+            background-color: #00AA00;
+        }
 
+        .legend-color.marked {
+            background-color: #6a5acd;
+        }
+
+        .legend-color.not-answered {
+            background-color: #FF6600;
+        }
 
         .exam-area {
             flex: 1;
@@ -463,9 +479,17 @@
 
 
         @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
 
@@ -520,17 +544,17 @@
             .main-container {
                 flex-direction: column;
             }
-            
+
             .sidebar {
                 width: 100%;
                 position: relative;
             }
-            
+
             .controls {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .btn {
                 width: 200px;
             }
@@ -571,126 +595,127 @@
             color: #cccccc;
             text-align: center;
         }
+
         /* Enhanced Accessibility Controls */
-.accessibility-controls {
-    position: fixed;
-    top: 220px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #FFFF00;
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 1002;
-    width: 200px;
-}
+        .accessibility-controls {
+            position: fixed;
+            top: 220px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #FFFF00;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 1002;
+            width: 200px;
+        }
 
-.accessibility-controls h4 {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    text-align: center;
-}
+        .accessibility-controls h4 {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
 
-.accessibility-controls button {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
-    font-size: 0.8rem;
-    padding: 8px;
-}
+        .accessibility-controls button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            font-size: 0.8rem;
+            padding: 8px;
+        }
 
-/* High Contrast and Color Blind Modes */
-.high-contrast {
-    filter: contrast(200%) brightness(150%);
-}
+        /* High Contrast and Color Blind Modes */
+        .high-contrast {
+            filter: contrast(200%) brightness(150%);
+        }
 
-.color-blind-mode {
-    filter: hue-rotate(180deg);
-}
+        .color-blind-mode {
+            filter: hue-rotate(180deg);
+        }
 
-/* OCR Camera Modal */
-.ocr-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
+        /* OCR Camera Modal */
+        .ocr-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
 
-.ocr-content {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
+        .ocr-content {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
 
-/* Handwriting Canvas */
-.handwriting-area {
-    background: #f0f0f0;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-}
+        /* Handwriting Canvas */
+        .handwriting-area {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
 
-#handwritingCanvas {
-    border: 2px solid #000;
-    cursor: crosshair;
-    background: white;
-    display: block;
-    margin: 10px auto;
-}
+        #handwritingCanvas {
+            border: 2px solid #000;
+            cursor: crosshair;
+            background: white;
+            display: block;
+            margin: 10px auto;
+        }
 
-/* Language Selector */
-.language-controls {
-    position: fixed;
-    top: 340px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #FFFF00;
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 1003;
-    width: 200px;
-}
+        /* Language Selector */
+        .language-controls {
+            position: fixed;
+            top: 340px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #FFFF00;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 1003;
+            width: 200px;
+        }
 
-.language-controls select {
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
+        .language-controls select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
 
-/* Privacy Mode Indicator */
-.privacy-active::before {
-    content: "🔒 Privacy Mode Active";
-    position: fixed;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #FF0000;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    z-index: 10000;
-}
+        /* Privacy Mode Indicator */
+        .privacy-active::before {
+            content: "🔒 Privacy Mode Active";
+            position: fixed;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FF0000;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            z-index: 10000;
+        }
 
-/* Offline Mode Indicator */
-.offline-indicator {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #008800;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    z-index: 1004;
-}
+        /* Offline Mode Indicator */
+        .offline-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #008800;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            z-index: 1004;
+        }
 
 
 
@@ -722,9 +747,17 @@
 
 
         @keyframes bulb-glow {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Font Size Slider Control */
@@ -780,10 +813,11 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Light Bulb Indicator -->
     <div class="light-indicator" id="lightBulb">💡</div>
-    
+
     <!-- Font Size Controls -->
     <div class="font-controls">
         <h4>Font Size</h4>
@@ -791,44 +825,44 @@
         <div class="font-size-display" id="fontSizeDisplay">16px</div>
     </div>
     <!-- Enhanced Accessibility Controls -->
-<div class="accessibility-controls" id="accessibilityPanel">
-    <h4>Accessibility</h4>
-    <button class="btn" onclick="toggleHighContrast()">High Contrast</button>
-    <button class="btn" onclick="toggleColorBlindMode()">Color Blind Mode</button>
-    <button class="btn" onclick="addExtraTime()">+5 Min Extra</button>
-    <button class="btn" onclick="initializeOCRCamera()">Scan Question</button>
-</div>
-
-<!-- Language Controls -->
-<div class="language-controls" id="languagePanel">
-    <h4>Language</h4>
-    <select id="languageSelect">
-        <option value="en">English</option>
-        <option value="hi">Hindi</option>
-        <option value="ta">Tamil</option>
-        <option value="bn">Bengali</option>
-        <option value="ur">Urdu</option>
-    </select>
-    <button class="btn" onclick="translateQuestion()">Translate</button>
-</div>
-
-<!-- OCR Camera Modal -->
-<div class="ocr-modal" id="ocrModal">
-    <div class="ocr-content">
-        <h3>OCR Question Scanner</h3>
-        <video id="cameraVideo" width="400" height="300" autoplay></video>
-        <br>
-        <button class="btn" onclick="captureAndOCR()">Capture & Read</button>
-        <button class="btn" onclick="closeOCRModal()">Close</button>
+    <div class="accessibility-controls" id="accessibilityPanel">
+        <h4>Accessibility</h4>
+        <button class="btn" onclick="toggleHighContrast()">High Contrast</button>
+        <button class="btn" onclick="toggleColorBlindMode()">Color Blind Mode</button>
+        <button class="btn" onclick="addExtraTime()">+5 Min Extra</button>
+        <button class="btn" onclick="initializeOCRCamera()">Scan Question</button>
     </div>
-</div>
 
-<!-- Offline Mode Indicator -->
-<div class="offline-indicator hidden" id="offlineIndicator">
-    📶 Offline Mode Active
-</div>
+    <!-- Language Controls -->
+    <div class="language-controls" id="languagePanel">
+        <h4>Language</h4>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="bn">Bengali</option>
+            <option value="ur">Urdu</option>
+        </select>
+        <button class="btn" onclick="translateQuestion()">Translate</button>
+    </div>
 
-    
+    <!-- OCR Camera Modal -->
+    <div class="ocr-modal" id="ocrModal">
+        <div class="ocr-content">
+            <h3>OCR Question Scanner</h3>
+            <video id="cameraVideo" width="400" height="300" autoplay></video>
+            <br>
+            <button class="btn" onclick="captureAndOCR()">Capture & Read</button>
+            <button class="btn" onclick="closeOCRModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Offline Mode Indicator -->
+    <div class="offline-indicator hidden" id="offlineIndicator">
+        📶 Offline Mode Active
+    </div>
+
+
     <div class="header">
         <h1>LEKHA MITRA</h1>
         <p>Class 12 Chemistry Examination System</p>
@@ -842,7 +876,7 @@
             <div class="question-nav" id="questionNav">
                 <!-- Question navigation buttons will be generated here -->
             </div>
-            
+
             <div class="legend">
                 <div class="legend-item">
                     <div class="legend-color not-attempted"></div>
@@ -855,6 +889,10 @@
                 <div class="legend-item">
                     <div class="legend-color marked"></div>
                     <span>Marked for Review</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color not-answered"></div>
+                    <span>Not Answered</span>
                 </div>
             </div>
         </div>
@@ -951,7 +989,7 @@
                 text: "Which of the following represents the electronic configuration of Chromium (Cr, Z=24)?",
                 options: [
                     "A) [Ar] 3d4 4s2",
-                    "B) [Ar] 3d5 4s1", 
+                    "B) [Ar] 3d5 4s1",
                     "C) [Ar] 3d6 4s0",
                     "D) [Ar] 3d3 4s3"
                 ],
@@ -972,7 +1010,7 @@
                 options: [
                     "A) HF",
                     "B) HCl",
-                    "C) HBr", 
+                    "C) HBr",
                     "D) HI"
                 ],
                 correct: "D"
@@ -991,7 +1029,7 @@
                 text: "Which type of isomerism is exhibited by [Co(NH3)4Cl2]+ complex?",
                 options: [
                     "A) Optical isomerism",
-                    "B) Geometrical isomerism", 
+                    "B) Geometrical isomerism",
                     "C) Ionization isomerism",
                     "D) Coordination isomerism"
                 ],
@@ -1076,7 +1114,7 @@
         function blinkLight() {
             const lightBulb = document.getElementById('lightBulb');
             lightBulb.classList.add('on');
-            
+
             setTimeout(() => {
                 lightBulb.classList.remove('on');
             }, 1000); // Light stays on for 1 second
@@ -1086,8 +1124,8 @@
         function initializeFontSlider() {
             const fontSlider = document.getElementById('fontSlider');
             const fontSizeDisplay = document.getElementById('fontSizeDisplay');
-            
-            fontSlider.addEventListener('input', function() {
+
+            fontSlider.addEventListener('input', function () {
                 const fontSize = this.value;
                 document.body.style.fontSize = fontSize + 'px';
                 fontSizeDisplay.textContent = fontSize + 'px';
@@ -1100,6 +1138,7 @@
         function speak(text) {
             if ('speechSynthesis' in window) {
                 const utterance = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.cancel();
                 window.speechSynthesis.speak(utterance);
             } else {
                 console.error("Speech synthesis not supported in this browser.");
@@ -1110,23 +1149,23 @@
 
 
         function initializeExam() {
-    createQuestionNavigation();
-    for (let i = 0; i < questions.length; i++) {
-        questionStatus[i] = 'not-attempted';
-    }
-    updateQuestionNavigation();
-    initializeFontSlider(); // Initialize font slider
-    
-    // ADD THESE NEW FEATURE INITIALIZATIONS:
-    enablePrivacyMode();
-    enableOfflineMode();
-    setupAutoRecovery();
-    
-    // Enhance voice recognition when it's initialized
-    if (typeof recognition !== 'undefined') {
-        enhanceVoiceCommands();
-    }
-}
+            createQuestionNavigation();
+            for (let i = 0; i < questions.length; i++) {
+                questionStatus[i] = 'not-attempted';
+            }
+            updateQuestionNavigation();
+            initializeFontSlider(); // Initialize font slider
+
+            // ADD THESE NEW FEATURE INITIALIZATIONS:
+            enablePrivacyMode();
+            enableOfflineMode();
+            setupAutoRecovery();
+
+            // Enhance voice recognition when it's initialized
+            if (typeof recognition !== 'undefined') {
+                enhanceVoiceCommands();
+            }
+        }
 
 
 
@@ -1165,7 +1204,7 @@
             examStarted = true;
             document.getElementById('rulesSection').classList.add('hidden');
             document.getElementById('examContent').classList.remove('hidden');
-            
+
             startTimers();
             displayQuestion(0);
             speak("Chemistry exam started. Question 1 is now displayed. You have 1 minute for each question.");
@@ -1177,7 +1216,7 @@
             examTimerInterval = setInterval(() => {
                 totalTimeRemaining--;
                 updateExamTimerDisplay();
-                
+
                 if (totalTimeRemaining <= 0) {
                     clearInterval(examTimerInterval);
                     clearInterval(questionTimerInterval);
@@ -1197,7 +1236,7 @@
             questionTimerInterval = setInterval(() => {
                 questionTimeRemaining--;
                 updateQuestionTimerDisplay();
-                
+
                 if (questionTimeRemaining <= 0) {
                     clearInterval(questionTimerInterval);
                     nextQuestion();
@@ -1210,7 +1249,7 @@
         function updateExamTimerDisplay() {
             const minutes = Math.floor(totalTimeRemaining / 60);
             const seconds = totalTimeRemaining % 60;
-            document.getElementById('examTimer').textContent = 
+            document.getElementById('examTimer').textContent =
                 `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
 
@@ -1227,7 +1266,7 @@
             currentQuestionIndex = index;
             const question = questions[index];
             const container = document.getElementById('questionContainer');
-            
+
             let questionHTML = '';
             if (question.type === 'subjective') {
                 questionHTML = `
@@ -1253,25 +1292,25 @@
                         <div class="question-text">${question.text}</div>
                         <div class="options">
                             ${question.options.map((option, optIndex) => {
-                                const optionLetter = String.fromCharCode(65 + optIndex);
-                                const isSelected = answers[index] === optionLetter;
-                                return `
+                    const optionLetter = String.fromCharCode(65 + optIndex);
+                    const isSelected = answers[index] === optionLetter;
+                    return `
                                 <div class="option ${isSelected ? 'selected' : ''}" onclick="selectOption('${optionLetter}')">
                                     ${option}
                                 </div>`;
-                            }).join('')}
+                }).join('')}
                         </div>
                     </div>
                 `;
             }
             container.innerHTML = questionHTML;
-            
+
             updateNavigationButtons();
             updateQuestionNavigation();
             // Add this at the end of displayQuestion function before the closing brace
-setTimeout(() => {
-    addHandwritingSupport();
-}, 100);
+            setTimeout(() => {
+                addHandwritingSupport();
+            }, 100);
 
         }
 
@@ -1280,18 +1319,18 @@ setTimeout(() => {
         function selectOption(option) {
             answers[currentQuestionIndex] = option;
             questionStatus[currentQuestionIndex] = 'attempted';
-            
+
             const optionElements = document.querySelectorAll('.option');
             optionElements.forEach(el => el.classList.remove('selected'));
             const optionIndex = option.charCodeAt(0) - 'A'.charCodeAt(0);
             if (optionElements[optionIndex]) {
                 optionElements[optionIndex].classList.add('selected');
             }
-            
+
             updateQuestionNavigation();
             updateBraille(`Option ${option} selected`);
             speak(`Option ${option} selected`);
-            
+
             // Blink the light bulb
             blinkLight();
         }
@@ -1342,7 +1381,59 @@ setTimeout(() => {
         function markForReview() {
             questionStatus[currentQuestionIndex] = 'marked';
             updateQuestionNavigation();
+            showNotification("Question marked for review!");
             speak("Question marked for review");
+        }
+
+        // small notification function
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.textContent = message;
+            notif.style.position = 'fixed';
+            notif.style.bottom = '20px';
+            notif.style.right = '20px';
+            notif.style.backgroundColor = '#ffff00';
+            notif.style.color = '#000';
+            notif.style.padding = '10px 20px';
+            notif.style.borderRadius = '10px';
+            notif.style.fontWeight = '600';
+            notif.style.opacity = '0.9';
+            notif.style.zIndex = '9999';
+            document.body.appendChild(notif);
+
+            setTimeout(() => notif.remove(), 2000); // disappears in 2s
+        }
+
+        function markNotAnswered(index) {
+            if (!answers[index] && questionStatus[index] === 'not-attempted') {
+                questionStatus[index] = 'not-answered';
+                updateQuestionNavigation();
+            }
+        }
+
+        function updateQuestionNavigation() {
+            const buttons = document.querySelectorAll('.question-nav-btn');
+            buttons.forEach((btn, index) => {
+                btn.className = 'question-nav-btn'; // reset
+
+                if (index === currentQuestionIndex) btn.classList.add('current');
+                else if (questionStatus[index] === 'attempted') btn.classList.add('attempted');
+                else if (questionStatus[index] === 'marked') btn.classList.add('marked');
+                else if (questionStatus[index] === 'not-answered') btn.classList.add('not-answered');
+            });
+        }
+
+        function nextQuestion() {
+            if (!answers[currentQuestionIndex] && questionStatus[currentQuestionIndex] !== 'marked') {
+                questionStatus[currentQuestionIndex] = 'not-answered';
+            }
+            if (currentQuestionIndex < questions.length - 1) {
+                clearInterval(questionTimerInterval);
+                currentQuestionIndex++;
+                displayQuestion(currentQuestionIndex);
+                startQuestionTimer();
+                speak(`Question ${currentQuestionIndex + 1}`);
+            }
         }
 
 
@@ -1355,8 +1446,8 @@ setTimeout(() => {
 
 
         function speakCurrentQuestion() {
-    smartQuestionReading();
-}
+            smartQuestionReading();
+        }
 
 
 
@@ -1364,7 +1455,7 @@ setTimeout(() => {
         function toggleBraille() {
             brailleVisible = !brailleVisible;
             const brailleSection = document.getElementById('brailleSection');
-            
+
             if (brailleVisible) {
                 brailleSection.classList.remove('hidden');
                 document.getElementById('brailleBtn').textContent = 'Hide Braille';
@@ -1407,7 +1498,7 @@ setTimeout(() => {
 
 
 
-            recognition.onstart = function() {
+            recognition.onstart = function () {
                 document.getElementById('voiceStatus').textContent = 'Recording...';
                 document.getElementById('voiceStatus').className = 'voice-status recording';
                 document.getElementById('voiceBtn').textContent = 'Stop Recording';
@@ -1416,7 +1507,7 @@ setTimeout(() => {
 
 
 
-            recognition.onresult = function(event) {
+            recognition.onresult = function (event) {
                 // Handle subjective question differently
                 if (questions[currentQuestionIndex].type === 'subjective') {
                     let fullTranscript = '';
@@ -1453,7 +1544,7 @@ setTimeout(() => {
                         finalTranscript += event.results[i][0].transcript.toLowerCase().trim();
                     }
                 }
-                
+
                 if (finalTranscript.includes('next')) {
                     nextQuestion();
                     stopVoiceRecognition();
@@ -1489,7 +1580,7 @@ setTimeout(() => {
 
 
 
-            recognition.onend = function() {
+            recognition.onend = function () {
                 document.getElementById('voiceStatus').textContent = 'Not Recording';
                 document.getElementById('voiceStatus').className = 'voice-status not-recording';
                 document.getElementById('voiceBtn').textContent = 'Start Voice Input';
@@ -1565,289 +1656,290 @@ setTimeout(() => {
         // Initialize the exam when the page loads
         window.onload = initializeExam;
         // OCR Camera Feature for Reading Questions Aloud
-let cameraStream = null;
+        let cameraStream = null;
 
-function initializeOCRCamera() {
-    if (!('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices)) {
-        speak("Camera not supported in this browser");
-        return;
-    }
-    
-    document.getElementById('ocrModal').style.display = 'flex';
-    
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(stream => {
-            cameraStream = stream;
-            document.getElementById('cameraVideo').srcObject = stream;
-            speak("Camera activated. Position question in view and click Capture & Read");
-        })
-        .catch(err => {
-            speak("Camera access denied");
-            closeOCRModal();
-        });
-}
+        function initializeOCRCamera() {
+            if (!('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices)) {
+                speak("Camera not supported in this browser");
+                return;
+            }
 
-function captureAndOCR() {
-    speak("Capturing image and processing with OCR...");
-    // Simulate OCR processing
-    setTimeout(() => {
-        speak("Question detected and reading aloud: " + questions[currentQuestionIndex].text);
-        closeOCRModal();
-    }, 2000);
-}
+            document.getElementById('ocrModal').style.display = 'flex';
 
-function closeOCRModal() {
-    if (cameraStream) {
-        cameraStream.getTracks().forEach(track => track.stop());
-        cameraStream = null;
-    }
-    document.getElementById('ocrModal').style.display = 'none';
-}
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    cameraStream = stream;
+                    document.getElementById('cameraVideo').srcObject = stream;
+                    speak("Camera activated. Position question in view and click Capture & Read");
+                })
+                .catch(err => {
+                    speak("Camera access denied");
+                    closeOCRModal();
+                });
+        }
 
-// Digital Handwriting Support
-function addHandwritingSupport() {
-    const answerArea = document.querySelector('.answer-area');
-    if (answerArea && questions[currentQuestionIndex].type === 'subjective') {
-        const handwritingDiv = document.createElement('div');
-        handwritingDiv.className = 'handwriting-area';
-        handwritingDiv.innerHTML = `
+        function captureAndOCR() {
+            speak("Capturing image and processing with OCR...");
+            // Simulate OCR processing
+            setTimeout(() => {
+                speak("Question detected and reading aloud: " + questions[currentQuestionIndex].text);
+                closeOCRModal();
+            }, 2000);
+        }
+
+        function closeOCRModal() {
+            if (cameraStream) {
+                cameraStream.getTracks().forEach(track => track.stop());
+                cameraStream = null;
+            }
+            document.getElementById('ocrModal').style.display = 'none';
+        }
+
+        // Digital Handwriting Support
+        function addHandwritingSupport() {
+            const answerArea = document.querySelector('.answer-area');
+            if (answerArea && questions[currentQuestionIndex].type === 'subjective') {
+                const handwritingDiv = document.createElement('div');
+                handwritingDiv.className = 'handwriting-area';
+                handwritingDiv.innerHTML = `
             <h4>Digital Writing Pad:</h4>
             <canvas id="handwritingCanvas" width="400" height="200"></canvas>
             <button class="btn" onclick="convertHandwritingToText()">Convert to Text</button>
             <button class="btn" onclick="clearCanvas()">Clear</button>
         `;
-        answerArea.appendChild(handwritingDiv);
-        
-        // Initialize canvas drawing
-        const canvas = document.getElementById('handwritingCanvas');
-        const ctx = canvas.getContext('2d');
-        let isDrawing = false;
-        
-        canvas.addEventListener('mousedown', startDrawing);
-        canvas.addEventListener('mousemove', draw);
-        canvas.addEventListener('mouseup', stopDrawing);
-        
-        function startDrawing(e) {
-            isDrawing = true;
-            ctx.beginPath();
-            ctx.moveTo(e.offsetX, e.offsetY);
-        }
-        
-        function draw(e) {
-            if (!isDrawing) return;
-            ctx.lineWidth = 2;
-            ctx.lineCap = 'round';
-            ctx.lineTo(e.offsetX, e.offsetY);
-            ctx.stroke();
-        }
-        
-        function stopDrawing() {
-            isDrawing = false;
-        }
-    }
-}
+                answerArea.appendChild(handwritingDiv);
 
-function convertHandwritingToText() {
-    speak("Converting handwriting to text...");
-    // Simulate handwriting recognition
-    setTimeout(() => {
-        const sampleText = "Sample converted text from handwriting";
-        document.getElementById('subjectiveAnswer').value = sampleText;
-        answers[currentQuestionIndex] = sampleText;
-        speak("Handwriting converted successfully");
-    }, 2000);
-}
+                // Initialize canvas drawing
+                const canvas = document.getElementById('handwritingCanvas');
+                const ctx = canvas.getContext('2d');
+                let isDrawing = false;
 
-function clearCanvas() {
-    const canvas = document.getElementById('handwritingCanvas');
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    speak("Canvas cleared");
-}
+                canvas.addEventListener('mousedown', startDrawing);
+                canvas.addEventListener('mousemove', draw);
+                canvas.addEventListener('mouseup', stopDrawing);
 
-// Multi-Language Translation
-function translateQuestion() {
-    const selectedLang = document.getElementById('languageSelect').value;
-    const langNames = {
-        'en': 'English',
-        'hi': 'Hindi', 
-        'ta': 'Tamil',
-        'bn': 'Bengali',
-        'ur': 'Urdu'
-    };
-    
-    speak(`Translating question to ${langNames[selectedLang]}...`);
-    
-    // Simulate translation
-    setTimeout(() => {
-        speak(`Question translated to ${langNames[selectedLang]}. Translation: ${questions[currentQuestionIndex].text}`);
-    }, 1500);
-}
+                function startDrawing(e) {
+                    isDrawing = true;
+                    ctx.beginPath();
+                    ctx.moveTo(e.offsetX, e.offsetY);
+                }
 
-// Enhanced Accessibility Controls
-function toggleHighContrast() {
-    document.body.classList.toggle('high-contrast');
-    const isActive = document.body.classList.contains('high-contrast');
-    speak(isActive ? "High contrast mode enabled" : "High contrast mode disabled");
-}
+                function draw(e) {
+                    if (!isDrawing) return;
+                    ctx.lineWidth = 2;
+                    ctx.lineCap = 'round';
+                    ctx.lineTo(e.offsetX, e.offsetY);
+                    ctx.stroke();
+                }
 
-function toggleColorBlindMode() {
-    document.body.classList.toggle('color-blind-mode');
-    const isActive = document.body.classList.contains('color-blind-mode');
-    speak(isActive ? "Color blind friendly mode enabled" : "Color blind friendly mode disabled");
-}
-
-function addExtraTime() {
-    totalTimeRemaining += 300; // Add 5 minutes
-    speak("5 minutes extra time added");
-}
-
-// Privacy Protection Features
-function enablePrivacyMode() {
-    document.body.classList.add('privacy-active');
-    
-    // Disable screenshot/screen recording
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'PrintScreen' || 
-            (e.ctrlKey && e.shiftKey && e.key === 'S') ||
-            (e.ctrlKey && e.key === 'p')) {
-            e.preventDefault();
-            speak("Screen capture blocked for privacy");
-        }
-    });
-    
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', e => {
-        e.preventDefault();
-        speak("Right click disabled for security");
-    });
-    
-    // Focus monitoring
-    let focusWarnings = 0;
-    window.addEventListener('blur', () => {
-        if (examStarted && focusWarnings < 3) {
-            focusWarnings++;
-            speak(`Warning ${focusWarnings}: Please keep focus on exam window`);
-        }
-    });
-    
-    speak("Privacy protection enabled");
-}
-
-// Offline Mode Support
-function enableOfflineMode() {
-    // Check if online/offline
-    function updateOnlineStatus() {
-        const isOffline = !navigator.onLine;
-        const indicator = document.getElementById('offlineIndicator');
-        
-        if (isOffline) {
-            indicator.classList.remove('hidden');
-            speak("You are now in offline mode");
-        } else {
-            indicator.classList.add('hidden');
-        }
-    }
-    
-    window.addEventListener('online', updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
-    updateOnlineStatus();
-    
-    // Save progress to localStorage
-    function saveProgress() {
-        localStorage.setItem('lekhaMitraAnswers', JSON.stringify(answers));
-        localStorage.setItem('lekhaMitraProgress', JSON.stringify({
-            currentQuestion: currentQuestionIndex,
-            timeRemaining: totalTimeRemaining,
-            questionStatus: questionStatus
-        }));
-    }
-    
-    // Auto-save every 30 seconds
-    setInterval(saveProgress, 30000);
-    
-    // Save before page unload
-    window.addEventListener('beforeunload', saveProgress);
-}
-
-// Enhanced Voice Commands
-function enhanceVoiceCommands() {
-    // Add more voice commands to existing recognition
-    const originalOnResult = recognition.onresult;
-    
-    recognition.onresult = function(event) {
-        // Call original handler first
-        originalOnResult.call(this, event);
-        
-        // Additional commands
-        let finalTranscript = '';
-        for (let i = event.resultIndex; i < event.results.length; i++) {
-            if (event.results[i].isFinal) {
-                finalTranscript += event.results[i][0].transcript.toLowerCase().trim();
+                function stopDrawing() {
+                    isDrawing = false;
+                }
             }
         }
-        
-        if (finalTranscript.includes('scan question')) {
-            initializeOCRCamera();
-            stopVoiceRecognition();
-        } else if (finalTranscript.includes('high contrast')) {
-            toggleHighContrast();
-            stopVoiceRecognition();
-        } else if (finalTranscript.includes('translate')) {
-            translateQuestion();
-            stopVoiceRecognition();
-        } else if (finalTranscript.includes('extra time')) {
-            addExtraTime();
-            stopVoiceRecognition();
-        }
-    };
-}
 
-// Smart Question Reading with Context
-function smartQuestionReading() {
-    const question = questions[currentQuestionIndex];
-    let contextualReading = `Question ${currentQuestionIndex + 1} of ${questions.length}. `;
-    
-    if (question.type === 'subjective') {
-        contextualReading += "This is a subjective question. ";
-    } else {
-        contextualReading += "This is a multiple choice question with 4 options. ";
-    }
-    
-    contextualReading += question.text;
-    
-    if (question.options) {
-        contextualReading += " Your options are: ";
-        question.options.forEach((option, index) => {
-            const letter = String.fromCharCode(65 + index);
-            contextualReading += `Option ${letter}: ${option}. `;
-        });
-    }
-    
-    speak(contextualReading);
-}
-
-// Auto-save and Recovery
-function setupAutoRecovery() {
-    // Check for saved data on load
-    const savedAnswers = localStorage.getItem('lekhaMitraAnswers');
-    const savedProgress = localStorage.getItem('lekhaMitraProgress');
-    
-    if (savedAnswers && savedProgress) {
-        const shouldRecover = confirm("Found saved exam progress. Would you like to continue from where you left?");
-        if (shouldRecover) {
-            answers = JSON.parse(savedAnswers);
-            const progress = JSON.parse(savedProgress);
-            currentQuestionIndex = progress.currentQuestion;
-            totalTimeRemaining = progress.timeRemaining;
-            questionStatus = progress.questionStatus;
-            
-            speak("Exam progress recovered successfully");
+        function convertHandwritingToText() {
+            speak("Converting handwriting to text...");
+            // Simulate handwriting recognition
+            setTimeout(() => {
+                const sampleText = "Sample converted text from handwriting";
+                document.getElementById('subjectiveAnswer').value = sampleText;
+                answers[currentQuestionIndex] = sampleText;
+                speak("Handwriting converted successfully");
+            }, 2000);
         }
-    }
-}
+
+        function clearCanvas() {
+            const canvas = document.getElementById('handwritingCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            speak("Canvas cleared");
+        }
+
+        // Multi-Language Translation
+        function translateQuestion() {
+            const selectedLang = document.getElementById('languageSelect').value;
+            const langNames = {
+                'en': 'English',
+                'hi': 'Hindi',
+                'ta': 'Tamil',
+                'bn': 'Bengali',
+                'ur': 'Urdu'
+            };
+
+            speak(`Translating question to ${langNames[selectedLang]}...`);
+
+            // Simulate translation
+            setTimeout(() => {
+                speak(`Question translated to ${langNames[selectedLang]}. Translation: ${questions[currentQuestionIndex].text}`);
+            }, 1500);
+        }
+
+        // Enhanced Accessibility Controls
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            const isActive = document.body.classList.contains('high-contrast');
+            speak(isActive ? "High contrast mode enabled" : "High contrast mode disabled");
+        }
+
+        function toggleColorBlindMode() {
+            document.body.classList.toggle('color-blind-mode');
+            const isActive = document.body.classList.contains('color-blind-mode');
+            speak(isActive ? "Color blind friendly mode enabled" : "Color blind friendly mode disabled");
+        }
+
+        function addExtraTime() {
+            totalTimeRemaining += 300; // Add 5 minutes
+            speak("5 minutes extra time added");
+        }
+
+        // Privacy Protection Features
+        function enablePrivacyMode() {
+            document.body.classList.add('privacy-active');
+
+            // Disable screenshot/screen recording
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'PrintScreen' ||
+                    (e.ctrlKey && e.shiftKey && e.key === 'S') ||
+                    (e.ctrlKey && e.key === 'p')) {
+                    e.preventDefault();
+                    speak("Screen capture blocked for privacy");
+                }
+            });
+
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', e => {
+                e.preventDefault();
+                speak("Right click disabled for security");
+            });
+
+            // Focus monitoring
+            let focusWarnings = 0;
+            window.addEventListener('blur', () => {
+                if (examStarted && focusWarnings < 3) {
+                    focusWarnings++;
+                    speak(`Warning ${focusWarnings}: Please keep focus on exam window`);
+                }
+            });
+
+            speak("Privacy protection enabled");
+        }
+
+        // Offline Mode Support
+        function enableOfflineMode() {
+            // Check if online/offline
+            function updateOnlineStatus() {
+                const isOffline = !navigator.onLine;
+                const indicator = document.getElementById('offlineIndicator');
+
+                if (isOffline) {
+                    indicator.classList.remove('hidden');
+                    speak("You are now in offline mode");
+                } else {
+                    indicator.classList.add('hidden');
+                }
+            }
+
+            window.addEventListener('online', updateOnlineStatus);
+            window.addEventListener('offline', updateOnlineStatus);
+            updateOnlineStatus();
+
+            // Save progress to localStorage
+            function saveProgress() {
+                localStorage.setItem('lekhaMitraAnswers', JSON.stringify(answers));
+                localStorage.setItem('lekhaMitraProgress', JSON.stringify({
+                    currentQuestion: currentQuestionIndex,
+                    timeRemaining: totalTimeRemaining,
+                    questionStatus: questionStatus
+                }));
+            }
+
+            // Auto-save every 30 seconds
+            setInterval(saveProgress, 30000);
+
+            // Save before page unload
+            window.addEventListener('beforeunload', saveProgress);
+        }
+
+        // Enhanced Voice Commands
+        function enhanceVoiceCommands() {
+            // Add more voice commands to existing recognition
+            const originalOnResult = recognition.onresult;
+
+            recognition.onresult = function (event) {
+                // Call original handler first
+                originalOnResult.call(this, event);
+
+                // Additional commands
+                let finalTranscript = '';
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript.toLowerCase().trim();
+                    }
+                }
+
+                if (finalTranscript.includes('scan question')) {
+                    initializeOCRCamera();
+                    stopVoiceRecognition();
+                } else if (finalTranscript.includes('high contrast')) {
+                    toggleHighContrast();
+                    stopVoiceRecognition();
+                } else if (finalTranscript.includes('translate')) {
+                    translateQuestion();
+                    stopVoiceRecognition();
+                } else if (finalTranscript.includes('extra time')) {
+                    addExtraTime();
+                    stopVoiceRecognition();
+                }
+            };
+        }
+
+        // Smart Question Reading with Context
+        function smartQuestionReading() {
+            const question = questions[currentQuestionIndex];
+            let contextualReading = `Question ${currentQuestionIndex + 1} of ${questions.length}. `;
+
+            if (question.type === 'subjective') {
+                contextualReading += "This is a subjective question. ";
+            } else {
+                contextualReading += "This is a multiple choice question with 4 options. ";
+            }
+
+            contextualReading += question.text;
+
+            if (question.options) {
+                contextualReading += " Your options are: ";
+                question.options.forEach((option, index) => {
+                    const letter = String.fromCharCode(65 + index);
+                    contextualReading += `Option ${letter}: ${option}. `;
+                });
+            }
+
+            speak(contextualReading);
+        }
+
+        // Auto-save and Recovery
+        function setupAutoRecovery() {
+            // Check for saved data on load
+            const savedAnswers = localStorage.getItem('lekhaMitraAnswers');
+            const savedProgress = localStorage.getItem('lekhaMitraProgress');
+
+            if (savedAnswers && savedProgress) {
+                const shouldRecover = confirm("Found saved exam progress. Would you like to continue from where you left?");
+                if (shouldRecover) {
+                    answers = JSON.parse(savedAnswers);
+                    const progress = JSON.parse(savedProgress);
+                    currentQuestionIndex = progress.currentQuestion;
+                    totalTimeRemaining = progress.timeRemaining;
+                    questionStatus = progress.questionStatus;
+
+                    speak("Exam progress recovered successfully");
+                }
+            }
+        }
 
     </script>
-    
+
 </body>
+
 </html>
